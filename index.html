@@ -2,14 +2,58 @@
 <html>
 
 <head>
-<title>Hello World!</title>
+	<title>jQuery test</title>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script>
+		$(document).ready(function() { 
+			$("#hide").click(function() {
+				$("#box").hide(1000);
+			});
+			$("#show").click(function() {
+				$("#box").show(1000);
+			});
+			$("#toggle").click(function() {
+				$("#box").toggle();
+			});
+			$("#slideup").click(function() {
+				$("#box").slideUp();
+			});
+			$("#slidedown").click(function() {
+				$("#box").slideDown();
+			});
+		 });
+	</script>
+
+	
+	<style>
+		body {
+			font-family: Arial;
+			background-color: #CCC;
+		}
+		#box {
+			background-color: lightblue;
+			height: 400px;
+		}
+	</style>
+
 </head>
 
 <body>
 	
-<p>
-	Hello!
-</p>
+<h1>
+	jQuery test
+</h1>
+
+<ul>
+<li id="hide"><a href="#">Hide</a></li>
+<li id="show"><a href="#">Show</a></li>
+<li id="toggle"><a href="#">Toggle</a></li>
+<li id="slideup"><a href="#">Slide Up</a></li>
+<li id="slidedown"><a href="#">Slide Down</a></li>
+
+</ul>
+
+<div id="box">Testing jQuery functions</div>
 
 <p>added on website</p>
 </body>
